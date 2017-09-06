@@ -1,6 +1,7 @@
 .gradle
 /build/
 /out/
+/db/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
