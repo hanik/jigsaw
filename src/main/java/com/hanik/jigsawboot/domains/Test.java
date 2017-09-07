@@ -1,27 +1,11 @@
 package com.hanik.jigsawboot.domains;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-import javax.persistence.*;
-import java.util.Date;
-
-@Table(name="Test")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name="TEST_DATA")
 @Entity
-public class Test {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
+public class Test extends BaseEntity {
 
     String testName;
-
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "CREATE_DATE")
-    private Date createDate;
 }
